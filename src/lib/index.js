@@ -59,7 +59,7 @@ Constant.install = function (Vue, options) {
     }
     return result
   }
-  Vue.prototype.$enum = Enum
+  Vue.prototype.$Enum = Enum
 }
 
 export default Constant
