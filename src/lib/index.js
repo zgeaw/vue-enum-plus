@@ -21,6 +21,23 @@ Constant.install = function (Vue, options) {
     }
   }
   /**
+   * 根据枚举值获取对象
+   * @param {*} constantName 枚举名
+   * @param {*} value          枚举值
+   * @returns
+   */
+  Enum.getObj = function (constantName, value) {
+    if (!constantInfo.hasOwnProperty(constantName)) {
+      return {}
+    }
+    let constantItem = constantInfo[constantName]
+    for (let item in constantItem) {
+      if (constantItem[item].value === value) {
+        return constantItem[item]
+      }
+    }
+  }
+  /**
    * 根据枚举名获取对应的描述键值对[{value:desc}]
    * @param {*} constantName 枚举名
    * @returns

@@ -1,7 +1,7 @@
 {
   "name": "vue-enum-plus",
   "description": "前端枚举工具",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "zgeaw <32237384@qq.com>",
   "license": "MIT",
   "main": "dist/vue-enum-plus.js",

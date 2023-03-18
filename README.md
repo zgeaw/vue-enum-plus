@@ -5,7 +5,7 @@
 ## **一、安装及初始化方法**
 
 ```
-1. npm install vue-enum-plus --save
+1. npm install vue-enum-plus --save  / yarn add vue-enum-plus
 2. 按以下格式定义您的枚举对象
 
 let enumInfo = {
@@ -29,9 +29,9 @@ let enumInfo = {
 
 ## **二、使用方法**
 
-目前插件提供三个方法
+目前插件提供四个方法
 
-可在全局使用 this.$Enum.getDescByValue() 、this.$Enum.getList() 、getValueDesc() 调用
+可在全局使用 this.$Enum.getDesc() 、this.$Enum.getObj() 、this.\$Enum.getList() 、getValueDesc() 调用
 
 根据枚举值获取描述
 示例：
@@ -40,7 +40,8 @@ let enumInfo = {
 
 ```
 params.row.type=1
-this.$Enum.getDescByValue('MESSAGE_TYPE', params.row.type)) //会议类型
+this.$Enum.getDesc('MESSAGE_TYPE', params.row.type) //会议类型 返回值是desc
+this.$Enum.getObj('MESSAGE_TYPE', params.row.type) //会议类型 返回值是{value: 1,desc: '系统',color: '#fff'}
 ```
 
 > 下拉菜单经常需要使用键值对来渲染 select 的 option [{value:desc}]
